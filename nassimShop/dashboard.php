@@ -108,7 +108,18 @@
             $delete_command_id->execute([$command_id]);
         }
     }
-    ?>
+
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+        header('Location: dash_login.php');
+        exit();
+    }
+
+    if (isset($_POST['logout'])) {
+        session_destroy();
+        header('Location: dash_login.php');
+        exit();
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +135,7 @@
         <div class="dashboard_container">
             <div class="header">
                 <h1>Your Dashboard</h1>
-                <h1>Welcome <span>Nassim</span></h1>
+                <h1>Welcome <span><?php echo $_SESSION['admin_name'];?></span></h1>
             </div>
             <div class="content">
                 <div class="admins">
@@ -260,11 +271,12 @@
             </div>
             <div class="footer">
                 <p>powered by &copy Digital<ion-icon name="power"></ion-icon>n</p>
-                <span name="logout"><ion-icon name="power"></ion-icon>Log out</span>
+                <form action="" method="post">
+                    <button type="submit" name="logout"><ion-icon name="power"></ion-icon>Log out</button>
+                </form>
             </div>
         </div>
     </div>
-
     <script><?php include "script.js"?></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

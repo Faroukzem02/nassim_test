@@ -20,15 +20,46 @@
 <body>
     <div class="history_div">
         <div class="history_container">
-            <?php
-                if(isset($_GET["pid"])){
-                    $pid=$_GET["pid"];
-                    $select_history = $conn -> prepare("SELECT * FROM `histories` WHERE id='$pid' ");
+            <h4>commands delivered</h4>
+            <div class="history_table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>command_id</th>
+                            <th>name</th>
+                            <th>phone</th>
+                            <th>adresse</th>
+                            <th>product_id</th>
+                            <th>product_price</th>
+                            <th>date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $select_history = $conn -> prepare("SELECT * FROM `histories` ");
                     $select_history -> execute();
-                    $fetch_history = $select_history->fetch(PDO::FETCH_ASSOC);
-                }
-            ?>
-            <h1>Command N° <?=$fetch_history["name"]?></h1>
+                    if ($select_history->rowCount()>0) {
+                        while ($fetch_history = $select_history->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+                        <tr>
+                            <td><?=$fetch_history["id"]?></td>
+                            <td><?=$fetch_history["command_id"]?></td>
+                            <td><?=$fetch_history["name"]?></td>
+                            <td><?=$fetch_history["phone"]?></td>
+                            <td><?=$fetch_history["adresse"]?></td>
+                            <td><?=$fetch_history["product_id"]?></td>
+                            <td><?=$fetch_history["product_price"]?></td>
+                            <td><?=$fetch_history["date"]?></td>
+                        </tr>
+                        <?php
+                        }
+                    }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+            <a onclick="goBack()"><span class="back"><ion-icon name="arrow-back-outline"></ion-icon>Back</span></a>
         </div>
     </div>
     <script><?php include "script.js"?></script>

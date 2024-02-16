@@ -404,20 +404,22 @@ body::-webkit-scrollbar-thumb {
     color: #34d100;
 }
 
-.dashboard .dashboard_container .footer span {
+.dashboard .dashboard_container .footer form button{
     color: #fff;
     display: flex;
     align-items: center;
+    background-color: transparent;
+    border: none;
 }
 
-.dashboard .dashboard_container .footer span ion-icon {
+.dashboard .dashboard_container .footer form button ion-icon {
     margin-right: 7px;
     font-size: 20px;
     transition: all ease .3s;
     cursor: pointer;
 }
 
-.dashboard .dashboard_container .footer span ion-icon:hover {
+.dashboard .dashboard_container .footer form button ion-icon:hover {
     color: rgb(229, 134, 0);
 }
 
@@ -434,4 +436,235 @@ body::-webkit-scrollbar-thumb {
     background-color: #121111;
     border-radius: 20px;
     padding: 20px;
+}
+
+.history_div .history_container h4{
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.history_div .history_container .history_table {
+    width: 100%;
+    height: 90%;
+}
+
+.history_div .history_container .history_table table{
+    width: 100%;
+    color:#fff;
+    text-align: center;
+}
+
+.history_div .history_container a {
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.history_div .history_container a span{
+    display: flex;
+    align-items: center;
+}
+
+.details_div{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details_div .details_container{
+    width: 40%;
+    height: 43%;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+.details_div .details_container h4 {
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.details_div .details_container .details{
+    text-align: center;
+    color: #fff;
+}
+
+.details_div .details_container a {
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.details_div .details_container a span{
+    display: flex;
+    align-items: center;
+}
+
+.dash_login{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.dash_login .dash_login_container{
+    width: 40%;
+    height: 37%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.dash_login .dash_login_container h3 {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.dash_login .dash_login_container p {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.dash_login .dash_login_container form{
+    width: 100%;
+}
+
+.dash_login .dash_login_container form input{
+    width: 100%;
+    margin-bottom: 15px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    padding: 0 15px;
+    outline: none;
+}
+
+.dash_login .dash_login_container form button{
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 2px 25px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.dash_login .dash_login_container form button:hover{
+    color: #fff;
+    background-color: #720000;
+}
+
+@media screen and (max-width:750px) {
+    .dash_login .dash_login_container{
+        width: 100%;
+        height: 35%;
+    }
+    
+    .history_div{
+        width:300%;
+    }
+
+    .history_div .history_container h4{
+        text-align: left;
+    }
+
+    .dashboard {
+        padding: 0;
+        height: auto;
+    }
+    
+    .dashboard .dashboard_container{
+        height: auto;
+        padding: 10px;
+    }
+
+    .dashboard .dashboard_container .header {
+        padding: 0;
+    }
+    
+    .dashboard .dashboard_container .header h1 {
+        font-size: 15px;
+    }
+    
+    .dashboard .dashboard_container .header h1 span {
+        font-size: 17px;
+    }
+
+    .dashboard .dashboard_container .content {
+        display: block;
+        padding: 10px;
+    }
+
+    .dashboard .dashboard_container .footer {
+        padding: 0;
+    }
+
+    .dashboard .dashboard_container .content .admins {
+        width: 100%;
+        height: 80vh;
+        padding: 10px 5px;
+        margin-bottom: 20px;
+    }
+
+    .dashboard .dashboard_container .content .admins .admins_table {
+        height: 55%;
+        overflow-y: scroll;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .dashboard .dashboard_container .content .products {
+        width: 100%;
+        height: 100vh;
+        padding: 10px 5px;
+        margin-bottom: 20px;
+    }
+
+    .dashboard .dashboard_container .content .products .product_table {
+        height: 52%;
+        overflow-y: scroll;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .dashboard .dashboard_container .content .commands {
+        width: 100%;
+        height: 80vh;
+        padding: 10px 5px;
+        margin-bottom: 20px;
+    }
+
+    .dashboard .dashboard_container .content .commands .command_table {
+        height: 87%;
+        overflow-y: scroll;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .details_div .details_container{
+        width: 100%;
+        height: 45%;
+    }
 }
