@@ -209,6 +209,22 @@ body::-webkit-scrollbar-thumb {
     background-color: #1a1a1a;
     border-radius: 20px;
     padding: 10px;
+    height: 60%;
+    overflow-y: scroll;
+}
+
+.dashboard .dashboard_container .content .products .form::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dashboard .dashboard_container .content .products .form::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.dashboard .dashboard_container .content .products .form::-webkit-scrollbar-thumb {
+    background: rgb(149, 149, 149);
+    border-radius: 10px;
 }
 
 .dashboard .dashboard_container .content .products .form h4 {
@@ -224,6 +240,16 @@ body::-webkit-scrollbar-thumb {
     outline: none;
     margin-bottom: 15px;
     border-radius: 10px;
+    padding: 0 10px;
+}
+
+.dashboard .dashboard_container .content .products .form textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    border-radius: 15px;
     padding: 0 10px;
 }
 
@@ -404,7 +430,7 @@ body::-webkit-scrollbar-thumb {
     color: #34d100;
 }
 
-.dashboard .dashboard_container .footer form button{
+.dashboard .dashboard_container .footer form button {
     color: #fff;
     display: flex;
     align-items: center;
@@ -423,7 +449,7 @@ body::-webkit-scrollbar-thumb {
     color: rgb(229, 134, 0);
 }
 
-.history_div{
+.history_div {
     background-color: #000;
     width: 100%;
     height: 100vh;
@@ -438,7 +464,7 @@ body::-webkit-scrollbar-thumb {
     padding: 20px;
 }
 
-.history_div .history_container h4{
+.history_div .history_container h4 {
     text-align: center;
     border-bottom: 1px solid #fff;
     color: #fff;
@@ -452,9 +478,9 @@ body::-webkit-scrollbar-thumb {
     height: 90%;
 }
 
-.history_div .history_container .history_table table{
+.history_div .history_container .history_table table {
     width: 100%;
-    color:#fff;
+    color: #fff;
     text-align: center;
 }
 
@@ -466,12 +492,12 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-.history_div .history_container a span{
+.history_div .history_container a span {
     display: flex;
     align-items: center;
 }
 
-.details_div{
+.details_div {
     width: 100%;
     height: 100vh;
     background-color: #000;
@@ -481,7 +507,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
-.details_div .details_container{
+.details_div .details_container {
     width: 40%;
     height: 43%;
     background-color: #1a1a1a;
@@ -499,7 +525,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 18px;
 }
 
-.details_div .details_container .details{
+.details_div .details_container .details {
     text-align: center;
     color: #fff;
 }
@@ -512,12 +538,12 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-.details_div .details_container a span{
+.details_div .details_container a span {
     display: flex;
     align-items: center;
 }
 
-.dash_login{
+.dash_login {
     width: 100%;
     height: 100vh;
     background-color: #000;
@@ -526,7 +552,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
-.dash_login .dash_login_container{
+.dash_login .dash_login_container {
     width: 40%;
     height: 37%;
     background-color: #1a1a1a;
@@ -546,11 +572,11 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 10px;
 }
 
-.dash_login .dash_login_container form{
+.dash_login .dash_login_container form {
     width: 100%;
 }
 
-.dash_login .dash_login_container form input{
+.dash_login .dash_login_container form input {
     width: 100%;
     margin-bottom: 15px;
     height: 30px;
@@ -560,7 +586,7 @@ body::-webkit-scrollbar-thumb {
     outline: none;
 }
 
-.dash_login .dash_login_container form button{
+.dash_login .dash_login_container form button {
     background-color: #fff;
     color: #000;
     border-radius: 10px;
@@ -571,22 +597,32 @@ body::-webkit-scrollbar-thumb {
     transition: all ease .3s;
 }
 
-.dash_login .dash_login_container form button:hover{
+.dash_login .dash_login_container form button:hover {
     color: #fff;
     background-color: #720000;
 }
 
+.dash_login .dash_login_container a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-bottom-left-radius: 20px;
+    font-size: 20px;
+}
+
 @media screen and (max-width:750px) {
-    .dash_login .dash_login_container{
+    .dash_login .dash_login_container {
         width: 100%;
         height: 35%;
     }
-    
-    .history_div{
-        width:300%;
+
+    .history_div {
+        width: 300%;
     }
 
-    .history_div .history_container h4{
+    .history_div .history_container h4 {
         text-align: left;
     }
 
@@ -594,8 +630,8 @@ body::-webkit-scrollbar-thumb {
         padding: 0;
         height: auto;
     }
-    
-    .dashboard .dashboard_container{
+
+    .dashboard .dashboard_container {
         height: auto;
         padding: 10px;
     }
@@ -603,11 +639,11 @@ body::-webkit-scrollbar-thumb {
     .dashboard .dashboard_container .header {
         padding: 0;
     }
-    
+
     .dashboard .dashboard_container .header h1 {
         font-size: 15px;
     }
-    
+
     .dashboard .dashboard_container .header h1 span {
         font-size: 17px;
     }
@@ -637,16 +673,21 @@ body::-webkit-scrollbar-thumb {
 
     .dashboard .dashboard_container .content .products {
         width: 100%;
-        height: 100vh;
+        height: 135vh;
         padding: 10px 5px;
         margin-bottom: 20px;
     }
 
     .dashboard .dashboard_container .content .products .product_table {
-        height: 52%;
+        height: 48%;
         overflow-y: scroll;
         margin-bottom: 10px;
         margin-top: 10px;
+    }
+
+    .dashboard .dashboard_container .content .products .form {
+        height: 45%;
+        overflow-y: none;
     }
 
     .dashboard .dashboard_container .content .commands {
@@ -663,7 +704,7 @@ body::-webkit-scrollbar-thumb {
         margin-top: 10px;
     }
 
-    .details_div .details_container{
+    .details_div .details_container {
         width: 100%;
         height: 45%;
     }

@@ -40,8 +40,17 @@
         $image= $_POST['image'];
         $image = filter_var($image,FILTER_SANITIZE_STRING);
 
-        $insert_user = $conn -> prepare("INSERT INTO `products` (id,category,name,price,image) Values (?,?,?,?,?)");
-        $insert_user->execute([$id,$category,$name,$price,$image]);
+        $nom= $_POST['nom'];
+        $nom = filter_var($nom,FILTER_SANITIZE_STRING);
+
+        $details= $_POST['details'];
+        $details = filter_var($details,FILTER_SANITIZE_STRING);
+
+        $evaluations= $_POST['evaluations'];
+        $evaluations = filter_var($evaluations,FILTER_SANITIZE_STRING);
+
+        $insert_user = $conn -> prepare("INSERT INTO `products` (id,category,name,price,image,nom,details,evaluations) Values (?,?,?,?,?,?,?,?)");
+        $insert_user->execute([$id,$category,$name,$price,$image,$nom,$details,$evaluations]);
     }
 
     if (isset($_POST["donecommand"])) {
@@ -226,6 +235,9 @@
                         <input type="text" placeholder="name" name="name">
                         <input type="number" placeholder="price" name="price">
                         <input type="text" placeholder="image" name="image">
+                        <input type="text" placeholder="evaluations" name="evaluations">
+                        <input type="text" placeholder="nom" name="nom">
+                        <textarea placeholder="details" name="details"></textarea>
                         <button type="submit" name="addproduct">add product</button>
                     </form>
                 </div>

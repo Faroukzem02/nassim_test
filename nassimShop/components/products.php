@@ -10,7 +10,7 @@
                             $tva = 120;
                             $pid = $fetch_products["id"];
                 ?>
-                <a href="prod<?=$pid?>.php?pid=<?=$pid?>"><div class="grid">
+                <a href="prod.php?pid=<?=$pid?>"><div class="grid">
                     <img src="imgs/<?=$fetch_products["image"] ?>" alt="">
                     <div class="details">
                         <h2><?=$fetch_products["name"] ?></h2>

@@ -54,6 +54,7 @@
                 <input type="password"  name="pass" placeholder="password" required>
                 <button type="submit" name="login">Login</button>
             </form>
+            <a href="index"><ion-icon name="close"></ion-icon></a>
         </div>
     </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
